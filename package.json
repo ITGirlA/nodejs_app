@@ -1,14 +1,45 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "./node_modules/.bin/cross-env NODE_ENV=development webpack ",
+    "build:prod": "./node_modules/.bin/cross-env NODE_ENV=production webpack ",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "jest": "^24.7.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "react-router": "^5.0.0",
+    "redux": "^4.0.1",
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITGirlA/nodejs_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ITGirlA/nodejs_app/issues"
+  },
+  "homepage": "https://github.com/ITGirlA/nodejs_app#readme",
+  "description": ""
 }
