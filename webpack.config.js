@@ -13,6 +13,7 @@ if (NODE_ENV ==='production') {
 }
 
 module.exports = {
+	mode: NODE_ENV,
 	context: path.join(__dirname, 'src'),
 	entry: './index.js',
 	
