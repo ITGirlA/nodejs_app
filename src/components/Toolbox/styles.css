@@ -1,0 +1,76 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  left: 0;
+  width: 100%;
+}
+
+.toolbox {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  z-index: 1;
+ 
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #464547;
+}
+
+.toolbox_head {
+    text-align: center;
+    color: #bbb;
+    font-weight: bold;
+
+}
+
+.toolbox_bottom {
+  text-align: center;
+  color: #464547;
+  background-color: rgb(221, 221, 221);
+  font-weight: bold;
+  min-height: 62px;
+}
+
+.toolbox-bottom-genre {
+  float:left;
+  padding: 5px 10px;
+  margin: 15px;
+}
+
+.toolbox__bold {
+  font-weight: bold;
+}
+
+.search-input{
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: calc(100% - 40px);
+  background: #f1f1f1;
+}
+
+.search-button{
+  opacity: 0.5;
+  border-radius: 5px;
+  float: right;
+  width: 120px;
+  padding: 10px;
+  margin: 10px ;
+  background: grey;
+  color: red;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+  
+
+
+  

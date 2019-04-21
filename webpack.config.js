@@ -5,12 +5,15 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let NODE_ENV = process.env.NODE_ENV;
 
 let plugins = [
-		new HtmlWebpackPlugin()		
+		new HtmlWebpackPlugin({
+			hash: true,
+			template: './index.html',
+			filename: './index.html' //relative to root of the application
+		}),
+		new ExtractTextPlugin("[name].css")		
 	];
 	
-if (NODE_ENV ==='production') {
-	plugins.push(new ExtractTextPlugin({filename: "styles.css"}))
-}
+
 
 module.exports = {
 	mode: NODE_ENV,
@@ -25,28 +28,28 @@ module.exports = {
 	},
 	
 	resolve: {
-		extensions: ['.js']
+		extensions: ['.js', '.jsx']
 	},
 	
 	module: {
 		rules: [
 		  {
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-			  loader: 'babel-loader'
-			},
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
+				},
 		  },
 		  {
-			test: /\.css$/,
-			exclude: /node_modules/,
-			use: ExtractTextPlugin.extract({ fallback:  "style-loader", use: "css-loader"})
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: ExtractTextPlugin.extract({ fallback:  "style-loader", use: "css-loader"})
 		  }
 		]
 	},
 	
 	plugins: plugins,
 
-	watch: false
+	watch: true
 	
 };

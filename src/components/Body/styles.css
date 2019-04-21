@@ -1,0 +1,49 @@
+.main-content {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  /*flex: 1;
+  overflow-y: auto;*/
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: row;
+  max-height: 100vh;
+}
+
+.movie-card {
+  margin: 10px;
+  border: 3px solid #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+  max-width: 200px;
+}
+
+.movie-card-img {
+  max-width: 100%;
+}
+
+.movie-card-body {
+  padding: 0 20px 20px;
+}
+
+.movie-card-title {
+  font-size: 22px;
+}
+
+.movie-card-date{
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 2px 5px;
+  float: right;
+  position: relative;
+}
+
+.movie-card-genre {
+  padding: 2px 5px;
+  text-align: left;
+}
+
